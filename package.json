@@ -1,0 +1,44 @@
+{
+  "name": "book-buds",
+  "version": "1.0.0",
+  "description": "an api to track what books you've read this year",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "migrate": "npx knex migrate:latest",
+    "rollback": "npx knex migrate:rollback",
+    "seed": "npx knex seed:run",
+    "reset": "npx knex migrate:latest && npx knex seed:run",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose --detectOpenHandles --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myfamurewa/book-buds.git"
+  },
+  "keywords": [
+    "books",
+    "REST",
+    "buds",
+    "bookbuds"
+  ],
+  "author": "myfamurewa <myfamurewa@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myfamurewa/book-buds/issues"
+  },
+  "homepage": "https://github.com/myfamurewa/book-buds#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.12",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
